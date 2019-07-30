@@ -1,7 +1,5 @@
 import Foundation
 import Capacitor
-import FirebaseCore
-import FirebaseAnalytics
 
 /**
  * Please read the Capacitor iOS Plugin Development Guide
@@ -10,12 +8,9 @@ import FirebaseAnalytics
 @objc(CapacitorMotion)
 public class CapacitorMotion: CAPPlugin {
     
-    @objc func sendUserID(_ call: CAPPluginCall) {
-        let value = call.getString("value") ?? ""
-        print("sendUserID here w/ args \(value)");
-        Analytics.setUserID(value);
+    @objc func startTracking(_ call: CAPPluginCall) {
         call.success([
-            "test": value
+            "test": "tset"
         ])
     }
 }
