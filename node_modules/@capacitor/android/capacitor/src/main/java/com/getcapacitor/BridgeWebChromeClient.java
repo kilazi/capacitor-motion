@@ -16,7 +16,6 @@ import android.webkit.PermissionRequest;
 import android.webkit.ValueCallback;
 import android.webkit.WebChromeClient;
 import android.webkit.WebView;
-import android.view.View;
 
 import com.getcapacitor.plugin.camera.CameraUtils;
 
@@ -41,17 +40,6 @@ public class BridgeWebChromeClient extends WebChromeClient {
 
   public BridgeWebChromeClient(Bridge bridge) {
     this.bridge = bridge;
-  }
-  
-  @Override
-  public void onShowCustomView(View view, CustomViewCallback callback) {
-    callback.onCustomViewHidden();
-    super.onShowCustomView(view, callback);
-  }
-  
-  @Override
-  public void onHideCustomView() {
-    super.onHideCustomView();
   }
 
   @Override

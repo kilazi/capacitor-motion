@@ -1,7 +1,10 @@
-import { Plugins } from "@capacitor/core";
-const { CapacitorMotionPlugin } = Plugins;
-export class CapacitorMotion {
-    startTracking() {
-        return CapacitorMotionPlugin.startTracking();
+import { Plugins } from '@capacitor/core';
+import { CapacitorMotionPlugin } from './definitions';
+
+const { CapacitorMotion } = Plugins;
+
+export class CapMotion implements CapacitorMotionPlugin {
+    startTracking(options: {value: string}): Promise<any> {
+        return CapacitorMotion.startTracking(options);
     }
 }

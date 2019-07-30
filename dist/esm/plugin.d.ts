@@ -1,3 +1,6 @@
-export declare class CapacitorMotion {
-    startTracking(): any;
+import { CapacitorMotionPlugin } from './definitions';
+export declare class CapMotion implements CapacitorMotionPlugin {
+    startTracking(options: {
+        value: string;
+    }): Promise<any>;
 }

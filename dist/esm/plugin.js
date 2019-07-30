@@ -1,8 +1,8 @@
-import { Plugins } from "@capacitor/core";
-const { CapacitorMotionPlugin } = Plugins;
-export class CapacitorMotion {
-    startTracking() {
-        return CapacitorMotionPlugin.startTracking();
+import { Plugins } from '@capacitor/core';
+const { CapacitorMotion } = Plugins;
+export class CapMotion {
+    startTracking(options) {
+        return CapacitorMotion.startTracking(options);
     }
 }
 //# sourceMappingURL=plugin.js.map

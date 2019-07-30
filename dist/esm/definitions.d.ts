@@ -1,8 +1,10 @@
-declare module "@capacitor/core" {
+declare global {
     interface PluginRegistry {
-        CapacitorMotion: CapacitorMotionPlugin;
+        CapacitorMotion?: CapacitorMotionPlugin;
     }
 }
 export interface CapacitorMotionPlugin {
-    startTracking(): Promise<any>;
+    startTracking(options: {
+        value: string;
+    }): Promise<any>;
 }
